@@ -6,6 +6,7 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "payments")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,6 +25,7 @@ public class Payment {
 
     private String currency;
 
+    @Column(unique = true)
     private String razorpayOrderId;
 
     private String razorpayPaymentId;

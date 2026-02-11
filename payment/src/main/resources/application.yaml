@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: payment
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/paymentdb
+    username: root
+    password: Sahil@1402
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8180
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+razorpay:
+  key: rzp_test_6BdyxBP1IEkga0
+  secret: RHdawHl2Ec3P0d6Hk6y2hbOj
